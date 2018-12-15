@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterApp", "PokeApp\MonsterApp.csproj", "{31B2A5A7-1734-4A2B-AFE3-C76D789990E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterApp", "MonsterApp\MonsterApp.csproj", "{A1B70FCE-EB19-49E7-8940-E9F08A29A390}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{31B2A5A7-1734-4A2B-AFE3-C76D789990E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31B2A5A7-1734-4A2B-AFE3-C76D789990E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31B2A5A7-1734-4A2B-AFE3-C76D789990E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31B2A5A7-1734-4A2B-AFE3-C76D789990E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B70FCE-EB19-49E7-8940-E9F08A29A390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B70FCE-EB19-49E7-8940-E9F08A29A390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B70FCE-EB19-49E7-8940-E9F08A29A390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B70FCE-EB19-49E7-8940-E9F08A29A390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2C27BB19-8D1A-4120-8D76-CBF3D1E741B1}
+		SolutionGuid = {FDDAF18D-5DC8-4EC0-BEA1-110B8CF4AC51}
 	EndGlobalSection
 EndGlobal
