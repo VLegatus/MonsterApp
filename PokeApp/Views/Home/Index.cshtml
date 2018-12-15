@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Monster Tables";
+}
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Monster Tables</h1>
+            <p class="lead">Make your own monsters and compare its stats to other monsters!</p>
+        </div>
+    </div>
+
+    <div class="row poketable">
+        <table class="table-bordered text-center">
+            <tr>
+                <th class="col-xs-1 text-center">Name</th>
+                <th class="col-xs-1">Type(s)</th>
+                <th class="col-xs-1">Gender</th>
+                <th class="col-xs-3">Description</th>
+            </tr>
+            <tr>
+                <td>Rimuru</td>
+                <td>Water</td>
+                <td>N/A</td>
+                <td>A special slime monster. He's not a bad slime, you know!</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default btn-primary" href=@Url.Action("Create", "Monster")>Create</a></p>
+        </div>
+    </div>
+</div>
