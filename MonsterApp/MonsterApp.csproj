@@ -205,11 +205,15 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Monster.cs" />
-    <Compile Include="Models\MonsterList.cs" />
+    <Compile Include="Models\MonsterVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\MonsterDB.mdf" />
+    <Content Include="App_Data\MonsterDB_log.ldf">
+      <DependentUpon>MonsterDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -269,10 +273,12 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Monster\Create.cshtml" />
+    <Content Include="Views\Monster\Details.cshtml" />
+    <Content Include="Views\Monster\Index.cshtml" />
+    <Content Include="Views\Monster\Delete.cshtml" />
+    <Content Include="Views\Monster\Edit.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
