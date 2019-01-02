@@ -4,17 +4,20 @@
     ViewBag.Title = "Index";
 }
 
+@*Unsure how to call sortTable without putting scripts in cshtml page*@
+<script src="~/Scripts/App.js">
+</script>
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table" id="monsterTable">
     <tr>
-        <th>
+        <th onclick="sortTable(0)">
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>
+        <th onclick="sortTable(1)">
             @Html.DisplayNameFor(model => model.Type)
         </th>
         <th>
