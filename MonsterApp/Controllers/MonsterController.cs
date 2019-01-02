@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MonsterApp.Models;
-using MonsterApp.Models;
 
 namespace MonsterApp.Controllers
 {
@@ -14,23 +13,15 @@ namespace MonsterApp.Controllers
         // GET: Monster
         public ActionResult Index()
         {
-            //MonsterList monsterList = new MonsterList() {
-            //     new Monster(){
-            var name = db.Monsters.Where(c => c.Id == 1).First().Name;
-            var type = db.Monsters.Where(c => c.Id == 1).First().Type;
-            var gender = db.Monsters.Where(c => c.Id == 1).First().Gender;
-            var description = db.Monsters.Where(c => c.Id == 1).First().Description;
-
-
-            //     }
-            //}
-            return View();
+            
+            return View(db.Monsters.ToList());
         }
 
         // GET: Monster/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Monster monster = db.Monsters.Find(id);
+            return View(monster);
         }
 
         // GET: Monster/Create
@@ -60,17 +51,22 @@ namespace MonsterApp.Controllers
         // GET: Monster/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var monsterEdit = db.Monsters.Where(c => c.Id == id).First();
+            return View(monsterEdit);
         }
 
         // POST: Monster/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Monster monster)
         {
             try
             {
-                // TODO: Add update logic here
-
+                var monsterToChange = db.Monsters.Where(m => m.Id == monster.Id).First();
+                monsterToChange.Name = monster.Name;
+                monsterToChange.Type = monster.Type;
+                monsterToChange.Gender = monster.Gender;
+                monsterToChange.Description = monster.Description;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -80,19 +76,23 @@ namespace MonsterApp.Controllers
         }
 
         // GET: Monster/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            Monster monster = db.Monsters.Find(id);
+            if (monster == null)
+                return HttpNotFound();
+            return View(monster);
         }
 
         // POST: Monster/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteMonster(int id)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                Monster monster = db.Monsters.Find(id);
+                db.Monsters.Remove(monster);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
