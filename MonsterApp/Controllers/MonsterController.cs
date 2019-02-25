@@ -39,8 +39,7 @@ namespace MonsterApp.Controllers
             {
                 db.Monsters.Add(monster);
                 db.SaveChanges();
-                return View();
-                //return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
             }
             catch
             {
