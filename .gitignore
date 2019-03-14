@@ -1,3 +1,4 @@
+
 # Created by https://www.gitignore.io/api/visualstudio
 
 ### VisualStudio ###
@@ -16,6 +17,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+
 *.po.backup
 *.pot.backup
 *.mo
@@ -27,15 +29,20 @@
 [Rr]eleases/
 x64/
 x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
 bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-
-# Visual Studio 2015 cache/options directory
+# Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
+
+
+# Visual Studio 2017 auto generated files
+Generated\ Files/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -50,10 +57,15 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
-# DNX
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# .NET Core
 project.lock.json
 project.fragment.lock.json
 artifacts/
+
 
 *_i.c
 *_p.c
@@ -72,6 +84,7 @@ artifacts/
 *.tlh
 *.tmp
 *.tmp_proj
+
 *.log
 *.vspscc
 *.vssscc
@@ -99,6 +112,7 @@ ipch/
 *.vsp
 *.vspx
 *.sap
+
 
 # TFS 2012 Local Workspace
 $tf/
@@ -151,7 +165,9 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
+
 # TODO: Comment the next line if you want to checkin your web deploy settings
+
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
@@ -164,6 +180,7 @@ PublishScripts/
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
+
 **/packages/*
 **/package-lock.json
 DACDashboard.Web/package-lock.json
@@ -175,6 +192,7 @@ DACDashboard.Web/package-lock.json
 *.nuget.props
 *.nuget.targets
 !.nuget/Nuget.exe
+
 
 # Microsoft Azure Build Output
 csx/
@@ -190,11 +208,14 @@ BundleArtifacts/
 Package.StoreAssociation.xml
 _pkginfo.txt
 
+
 # Visual Studio cache files
 # files ending in .cache can be ignored
 *.[Cc]ache
 # but keep track of directories ending in .cache
-!*.[Cc]ache/
+
+!?*.[Cc]ache/
+
 
 # Others
 ClientBin/
@@ -202,6 +223,7 @@ ClientBin/
 *~
 *.dbmdl
 *.dbproj.schemaview
+
 *.pfx
 *.publishsettings
 node_modules/
@@ -218,6 +240,7 @@ orleans.codegen.cs
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
 #bower_components/
 
+
 # RIA/Silverlight projects
 Generated_Code/
 
@@ -229,14 +252,17 @@ Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
+
 # SQL Server files
 *.mdf
 *.ldf
+
 
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
 *.bim_*.settings
+
 
 # Microsoft Fakes
 FakesAssemblies/
@@ -247,11 +273,13 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 
+
 # Visual Studio 6 build log
 *.plg
 
 # Visual Studio 6 workspace options file
 *.opt
+
 
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
@@ -273,6 +301,7 @@ paket-files/
 *.sln.iml
 
 
+
 # node / angular
 typings
 app/**/*.js
@@ -282,3 +311,4 @@ jspm_packages
 bower_components/
 
 /DACDashboard.Web/Assets/images/navigation_menu/oldIcons
+
